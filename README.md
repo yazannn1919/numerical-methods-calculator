@@ -8,4 +8,3 @@ A simple Numerical Analysis web project that calculates roots of equations using
 - False Position Method
 - Secant Method
 - Newton-Raphson Method
-- Fixed Point Iteration
