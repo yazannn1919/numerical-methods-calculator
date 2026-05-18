@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic page settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numerical Methods Project</title>
+
+    <!-- Link to the shared CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main header of the website -->
+    <header class="header">
+        <h1>Numerical Methods Calculator</h1>
+        <p>Root-finding methods for Numerical Analysis</p>
+
+        <!-- Navigation links to all method pages -->
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="bisection.html">Bisection</a>
+            <a href="false-position.html">False Position</a>
+            <a href="secant.html">Secant</a>
+            <a href="newton.html">Newton-Raphson</a>
+        </nav>
+    </header>
+
+    <!-- Main content area -->
+    <div class="container">
+
+        <!-- Introduction section -->
+        <div class="card">
+            <h2>Project Overview</h2>
+
+            <p>
+                This website is a simple Numerical Analysis project that calculates
+                roots of equations using different numerical methods.
+            </p>
+
+            <p>
+                Each method has its own page with inputs, a calculation button,
+                a final result, and an iteration table or output area.
+            </p>
+        </div>
+
+        <!-- Simple usage explanation -->
+        <div class="card">
+            <h2>How to Use the Calculator</h2>
+
+            <p>
+                First, choose one of the methods below. Then enter the polynomial terms,
+                starting values, tolerance, and maximum number of iterations.
+            </p>
+
+            <p>
+                After clicking the solve button, the page will show the approximate root
+                and the steps used to reach it.
+            </p>
+        </div>
+
+        <!-- Methods section title -->
+        <h2>Available Root-Finding Methods</h2>
+
+        <!-- Grid that contains all method cards -->
+        <div class="cards-container">
+
+            <!-- Bisection card -->
+            <div class="card">
+                <h3>Bisection Method</h3>
+
+                <p>
+                    Uses an interval [a, b] and repeatedly cuts it in half
+                    until the root is found.
+                </p>
+
+                <a href="bisection.html" class="btn">Open Bisection</a>
+            </div>
+
+            <!-- False Position card -->
+            <div class="card">
+                <h3>False Position Method</h3>
+
+                <p>
+                    Uses two points around the root and finds a better estimate
+                    using a straight line.
+                </p>
+
+                <a href="false-position.html" class="btn">Open False Position</a>
+            </div>
+
+            <!-- Secant card -->
+            <div class="card">
+                <h3>Secant Method</h3>
+
+                <p>
+                    Uses two starting guesses and approximates the root without
+                    needing the derivative.
+                </p>
+
+                <a href="secant.html" class="btn">Open Secant</a>
+            </div>
+
+            <!-- Newton-Raphson card -->
+            <div class="card">
+                <h3>Newton-Raphson Method</h3>
+
+                <p>
+                    Uses one starting guess and the derivative of the function
+                    to approach the root.
+                </p>
+
+                <a href="newton.html" class="btn">Open Newton-Raphson</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <footer class="footer">
+        <p>Numerical Analysis Project</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic page settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bisection Method</title>
+
+    <!-- Link to shared CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Website header and navigation -->
+    <header class="header">
+        <h1>Numerical Methods Calculator</h1>
+        <p>Bisection Method</p>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="bisection.html">Bisection</a>
+            <a href="false-position.html">False Position</a>
+            <a href="secant.html">Secant</a>
+            <a href="newton.html">Newton-Raphson</a>
+        </nav>
+    </header>
+
+    <!-- Main page content -->
+    <div class="container">
+
+        <!-- Method explanation -->
+        <div class="card">
+            <h2>Bisection Method</h2>
+
+            <p>
+                The Bisection Method is used to find the root of a function inside
+                an interval [a, b].
+            </p>
+
+            <p>
+                First, we check if f(a) and f(b) have opposite signs. If they do,
+                then a root exists inside the interval.
+            </p>
+
+            <div class="note">
+                Formula: c = (a + b) / 2
+            </div>
+        </div>
+
+        <!-- Polynomial input section -->
+        <div class="card">
+            <h2>Function Input</h2>
+
+            <!-- User enters how many polynomial terms are needed -->
+            <label for="termsCount">Number of terms</label>
+            <input type="number" id="termsCount" min="1" value="3">
+
+            <!-- This button creates the coefficient and power inputs -->
+            <button onclick="generatePolynomialInputs()">Generate Terms</button>
+
+            <!-- The generated term inputs will appear here -->
+            <div id="termsContainer"></div>
+        </div>
+
+        <!-- Bisection method inputs -->
+        <div class="card">
+            <h2>Bisection Inputs</h2>
+
+            <!-- Left side of the interval -->
+            <label for="a">a</label>
+            <input type="number" id="a" step="any" value="1">
+
+            <!-- Right side of the interval -->
+            <label for="b">b</label>
+            <input type="number" id="b" step="any" value="2">
+
+            <!-- Stopping error -->
+            <label for="tolerance">Tolerance</label>
+            <input type="number" id="tolerance" step="any" value="0.0001">
+
+            <!-- Maximum number of iterations -->
+            <label for="maxIterations">Max Iterations</label>
+            <input type="number" id="maxIterations" min="1" value="50">
+
+            <!-- This button calls the Bisection function from script.js -->
+            <button onclick="solveBisection()">Solve</button>
+        </div>
+
+        <!-- Final result will be displayed here -->
+        <div id="result"></div>
+
+        <!-- Iteration table -->
+        <div class="card">
+            <h2>Iteration Table</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Iteration</th>
+                            <th>a</th>
+                            <th>b</th>
+                            <th>c</th>
+                            <th>f(a)</th>
+                            <th>f(b)</th>
+                            <th>f(c)</th>
+                            <th>Error</th>
+                        </tr>
+                    </thead>
+
+                    <!-- JavaScript will add rows inside this tbody -->
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Numerical Analysis Project</p>
+    </footer>
+
+    <!-- Link to shared JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>

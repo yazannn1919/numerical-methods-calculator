@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic page settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newton-Raphson Method</title>
+
+    <!-- Link to shared CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Website header and navigation -->
+    <header class="header">
+        <h1>Numerical Methods Calculator</h1>
+        <p>Newton-Raphson Method</p>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="bisection.html">Bisection</a>
+            <a href="false-position.html">False Position</a>
+            <a href="secant.html">Secant</a>
+            <a href="newton.html">Newton-Raphson</a>
+        </nav>
+    </header>
+
+    <!-- Main page content -->
+    <div class="container">
+
+        <!-- Method explanation -->
+        <div class="card">
+            <h2>Newton-Raphson Method</h2>
+
+            <p>
+                The Newton-Raphson Method starts with one initial guess and uses
+                the function and its derivative to find the root.
+            </p>
+
+            <p>
+                In this project, the derivative is calculated using the basic
+                polynomial rule: if the term is a x^p, then its derivative is
+                a p x^(p-1).
+            </p>
+
+            <div class="note">
+                Formula:<br>
+                x(n+1) = x(n) - f(x(n)) / f'(x(n))
+            </div>
+        </div>
+
+        <!-- Polynomial input section -->
+        <div class="card">
+            <h2>Function Input</h2>
+
+            <!-- User enters how many polynomial terms are needed -->
+            <label for="termsCount">Number of terms</label>
+            <input type="number" id="termsCount" min="1" value="2">
+
+            <!-- This button creates the coefficient and power inputs -->
+            <button onclick="generatePolynomialInputs()">Generate Terms</button>
+
+            <!-- The generated term inputs will appear here -->
+            <div id="termsContainer"></div>
+        </div>
+
+        <!-- Newton-Raphson method inputs -->
+        <div class="card">
+            <h2>Newton-Raphson Inputs</h2>
+
+            <!-- Starting guess -->
+            <label for="initial">Xi</label>
+            <input type="number" id="initial" step="any" value="1">
+
+            <!-- Stopping error -->
+            <label for="tolerance">Tolerance</label>
+            <input type="number" id="tolerance" step="any" value="0.0001">
+
+            <!-- Maximum number of iterations -->
+            <label for="maxIterations">Max Iterations</label>
+            <input type="number" id="maxIterations" min="1" value="50">
+
+            <!-- This button calls the Newton-Raphson function from script.js -->
+            <button onclick="calculateNewtonRaphson()">Solve</button>
+        </div>
+
+        <!-- Output area used by the Newton-Raphson function -->
+        <div id="result"></div>
+
+        <!-- Iteration table -->
+        <div class="card">
+            <h2>Iteration Table</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Iteration</th>
+                            <th>x(n)</th>
+                            <th>f(x)</th>
+                            <th>f'(x)</th>
+                            <th>x(n+1)</th>
+                            <th>Error</th>
+                        </tr>
+                    </thead>
+
+                    <!-- JavaScript will add rows here -->
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Numerical Analysis Project</p>
+    </footer>
+
+    <!-- Link to shared JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>

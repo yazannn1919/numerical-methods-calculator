@@ -1,0 +1,372 @@
+/* =========================================================
+   General Page Style
+   This file is shared by all pages
+========================================================= */
+
+/* Reset default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main body style */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Main page container */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+/* Page title */
+h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #1f3c88;
+}
+
+/* Section titles */
+h2 {
+    margin-bottom: 15px;
+    color: #1f3c88;
+}
+
+/* Smaller headings */
+h3 {
+    margin-bottom: 10px;
+    color: #243b53;
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 10px;
+}
+
+/* =========================================================
+   Header / Top Area
+========================================================= */
+
+.header {
+    background-color: #1f3c88;
+    color: white;
+    padding: 28px 15px;
+    text-align: center;
+    border-bottom: 5px solid #102a63;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.header h1 {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #e6ecff;
+    margin-bottom: 15px;
+}
+
+/* =========================================================
+   Cards
+   Used for homepage method cards and input cards
+========================================================= */
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.cards-container .card {
+    width: 31%;
+    min-width: 250px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #dbe3ef;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    margin-bottom: 25px;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    transition: 0.2s;
+}
+
+/* Links inside cards */
+.card a:not(.btn) {
+    text-decoration: none;
+    color: #1f3c88;
+    font-weight: bold;
+}
+
+.card a:not(.btn):hover {
+    color: #102a63;
+}
+
+/* =========================================================
+   Forms / Inputs
+========================================================= */
+
+.form-section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #dbe3ef;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    margin-bottom: 25px;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #243b53;
+}
+
+/* Inputs and select boxes */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b8c7dd;
+    border-radius: 8px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+/* When input is selected */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #1f3c88;
+    box-shadow: 0 0 5px rgba(31, 60, 136, 0.3);
+}
+
+/* Textarea output */
+textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+/* =========================================================
+   Buttons
+========================================================= */
+
+button,
+.btn {
+    display: inline-block;
+    background-color: #1f3c88;
+    color: white;
+    padding: 11px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    text-decoration: none;
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+button:hover,
+.btn:hover {
+    background-color: #102a63;
+    color: white;
+}
+
+/* Secondary button */
+.btn-secondary {
+    background-color: #64748b;
+}
+
+.btn-secondary:hover {
+    background-color: #475569;
+}
+
+/* =========================================================
+   Result and Error Messages
+========================================================= */
+
+.result {
+    background-color: #e8f5e9;
+    border-left: 5px solid #2e7d32;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.error {
+    background-color: #ffebee;
+    color: #b71c1c;
+    border-left: 5px solid #c62828;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+/* =========================================================
+   Tables
+========================================================= */
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 25px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #1f3c88;
+    color: white;
+    padding: 12px;
+    text-align: center;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #dbe3ef;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+/* =========================================================
+   Navigation / Back Link
+========================================================= */
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #1f3c88;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* =========================================================
+   Polynomial Terms Container
+========================================================= */
+
+#termsContainer {
+    margin-top: 20px;
+}
+
+/* Make generated polynomial cards spaced nicely */
+#termsContainer .card {
+    margin-bottom: 15px;
+}
+
+/* =========================================================
+   Footer
+========================================================= */
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* =========================================================
+   Responsive Design
+   Makes it look better on smaller screens
+========================================================= */
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .form-section {
+        padding: 18px;
+    }
+
+    button,
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    th,
+    td {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .cards-container .card {
+        width: 100%;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 8px auto;
+        width: 90%;
+    }
+}
+
+/* =========================================================
+   Navigation Bar
+========================================================= */
+
+.navbar {
+    margin-top: 18px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 6px;
+    padding: 8px 13px;
+    font-weight: bold;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.navbar a:hover {
+    background-color: white;
+    color: #1f3c88;
+}
+
+/* =========================================================
+   Notes / Formula Boxes
+========================================================= */
+
+.note {
+    background-color: #eef4ff;
+    border-left: 5px solid #1f3c88;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #243b53;
+}

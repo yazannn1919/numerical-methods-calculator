@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic page settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secant Method</title>
+
+    <!-- Link to shared CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Website header and navigation -->
+    <header class="header">
+        <h1>Numerical Methods Calculator</h1>
+        <p>Secant Method</p>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="bisection.html">Bisection</a>
+            <a href="false-position.html">False Position</a>
+            <a href="secant.html">Secant</a>
+            <a href="newton.html">Newton-Raphson</a>
+        </nav>
+    </header>
+
+    <!-- Main page content -->
+    <div class="container">
+
+        <!-- Method explanation -->
+        <div class="card">
+            <h2>Secant Method</h2>
+
+            <p>
+                The Secant Method is used to find the root of a function using
+                two starting values.
+            </p>
+
+            <p>
+                It is similar to Newton-Raphson, but it does not need the actual
+                derivative. Instead, it uses two previous points to estimate the next value.
+            </p>
+
+            <div class="note">
+                Formula:
+                x(n+1) = x(n) - (f(x(n)) × (x(n) - x(n-1))) / (f(x(n)) - f(x(n-1)))
+            </div>
+        </div>
+
+        <!-- Polynomial input section -->
+        <div class="card">
+            <h2>Function Input</h2>
+
+            <!-- User enters how many polynomial terms are needed -->
+            <label>Number of terms</label>
+            <input type="number" id="termsCount" min="1" value="3">
+
+            <!-- This button creates the coefficient and power inputs -->
+            <button onclick="generatePolynomialInputs()">Generate Terms</button>
+
+            <!-- The generated term inputs will appear here -->
+            <div id="termsContainer"></div>
+        </div>
+
+        <!-- Secant method inputs -->
+        <div class="card">
+            <h2>Secant Inputs</h2>
+
+            <!-- First starting value -->
+            <label>x(n-1)</label>
+            <input type="number" id="xOld" step="any" value="1">
+
+            <!-- Second starting value -->
+            <label>x(n)</label>
+            <input type="number" id="xCurrent" step="any" value="2">
+
+            <!-- Stopping error -->
+            <label>Tolerance</label>
+            <input type="number" id="tolerance" step="any" value="0.0001">
+
+            <!-- Maximum number of iterations -->
+            <label>Max Iterations</label>
+            <input type="number" id="maxIterations" value="50">
+
+            <!-- This button calls the Secant function from script.js -->
+            <button onclick="solveSecant()">Solve</button>
+        </div>
+
+        <!-- Final result will be displayed here -->
+        <div id="result"></div>
+
+        <!-- Iteration table -->
+        <div class="card">
+            <h2>Iteration Table</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Iteration</th>
+                        <th>x(n-1)</th>
+                        <th>x(n)</th>
+                        <th>x(n+1)</th>
+                        <th>f(xn-1)</th>
+                        <th>f(xn)</th>
+                        <th>f(xn+1)</th>
+                        <th>Error</th>
+                    </tr>
+                </thead>
+
+                <!-- JavaScript will add rows inside this tbody -->
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Numerical Analysis Project</p>
+    </footer>
+
+    <!-- Link to shared JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html> 
